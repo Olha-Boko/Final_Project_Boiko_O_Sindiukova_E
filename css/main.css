@@ -1,0 +1,350 @@
+/*@charset "UTF-8";*/
+/* CSS Document */
+
+/*basic reset*/
+/*browsers have built in values for elements so we'll reset a few things to zero, you can add to this or remove items as needed*/
+
+div,p,body,header,footer,section,article,nav 
+{ 
+	margin: 0; 
+	padding: 0; 
+}	
+
+img 
+{ 
+	border: none; /*Remove border if image is a link*/
+	margin: 0; 
+	padding: 0; 
+}
+
+/*html selectors*/
+
+body 
+{
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	color: #333;
+}
+
+
+/*a:link is for not visited(standard unclicked link), 
+a:visited is for visited, and just a applies to both.*/
+/*a will also style anchor links*/
+
+a:link, a:visited 
+{ 
+ 	text-decoration:none; 	
+}
+
+a:hover, a:active 
+{ 
+	text-decoration:none; 
+}
+
+/*hide elements from browser but show for doc outline*/
+
+.hidden
+{
+	display: none;
+}
+
+/* MAIN COLORS
+baa68c
+d0812f
+5d3720
+*/
+#topBar
+{
+	background-color: #5d3720;
+	height: 22px;
+}
+#topBar2
+{
+	background-color: #d0812f;
+	height: 14px;
+}
+
+/*Site Container*/
+/*This is essentially a box that we place the whole site in.  
+We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 20px (960px) so it fits on 1024x768 screens.*/
+
+#siteContainer 
+{
+	margin: 0 auto;
+	width: 920px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/*This is a flex container*/
+#mainHeader
+{
+	height: 196px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+  	background: url(../images/pattern_top.jpg) no-repeat;
+}
+
+/*This is a flex item*/
+#logo
+{
+	width: 240px;
+	margin-top: 25px;
+	margin-left: 22px;
+}
+
+/*This is also a flex item*/
+/*We use margin left auto to send it all the way to the right*/
+#mainNav {
+	margin-left: auto;
+	width: 480px;
+    height: 25px;
+    margin-top: 80px;
+}
+
+#mainNav ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+#mainNav ul li{
+  display: inline;
+  font-size: 15px;
+  border-right: 2px solid  #5d3720;
+}
+
+#mainNav ul li:last-child{
+	border-right: none;
+}
+
+#mainNav ul li a{
+  color: #d0812f;
+  padding: 8px;
+  font-weight: bold;
+}
+
+#mainNav ul li a:hover{
+  color: #baa68c;
+  padding: 8px;
+}
+/*--------------------------------------------------------------------------*/
+#promo 
+{
+	margin-top: 10px;
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+}
+#promoImage 
+{
+	width: 600px;
+}
+
+#promoText 
+{
+	margin-left: auto;
+	margin-top: 15px;
+	width: 260px;
+}
+.mainText{
+	font-size: 20px;
+	color: #5d3720;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+p {
+	font-size: 14px;
+	color: #5d3720;
+	line-height: 25px;
+}
+.orangeText {
+	color: #d0812f;
+	font-weight: bold;
+}
+
+#productInfo 
+{
+	display: flex;
+	flex-direction: row;
+  	justify-content: space-between;
+	padding-bottom: 20px;
+}
+.productDesc 
+{
+	width: 200px;
+}
+.prodBut {
+	background-color: #baa68c;
+	display: block;
+	margin-top: -3px;
+	width: 200px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	text-align: center;
+	color: #fff;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.prodBut2 {
+	background-color: #eae4dc;
+	display: block;
+	margin-top: -3px;
+	width: 200px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	text-align: center;
+	color: #d28942;
+	font-size: 15px;
+	font-weight: bold;
+}
+.prodText {
+	font-weight: normal; 
+	margin-top: 20px;
+	text-align: left;
+	padding-left: 15px;
+	padding-right: 15px;
+
+}
+.productDesc a:hover  
+{
+	color: #5d3720;
+}
+/*---------------------------------------------------------------------------*/
+
+  #mainFooter 
+{
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+  	height: 140px;
+  	background: url(../images/pattern_bottom.jpg) no-repeat;
+}
+
+#footerNav 
+{
+	width: 500px;
+	margin-top: 20px;
+	margin-left: 15px;
+}
+
+#footerNav ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+#footerNav ul li{
+  display: inline;
+  font-size: 15px;
+  border-right: 2px solid  #baa68c;
+}
+
+#footerNav ul li:last-child {
+	border-right: none;
+}
+#footerNav ul li a{
+  color: #baa68c;
+  padding: 8px;
+  font-weight: bold;
+}
+
+#footerNav ul li a:hover{
+  color: #d0812f;
+  padding: 8px;
+}
+
+.socialMedia{
+  margin-left: auto;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+#iconNav{
+  list-style-type: none;
+  padding: 0;
+  width: 250px;
+}
+#iconNav li{
+  display: inline;
+  margin-right: 10px;
+}
+#iconNav img {
+  width: 50px;
+  height: 50px;
+}
+.socialMedia li a:hover{
+ 	filter: drop-shadow(5px 5px 5px #5d3720);
+}
+
+/*Page 2 - Notice we are using one style sheet for all of the pages*/
+
+/*---------------------CONTACT PAGE----------------------------------*/
+
+#contentCon {
+	margin-top: 15px;
+	padding-bottom: 30px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+}
+#content1 {
+	width: 440px;
+}
+.contHeader{
+	font-size: 20px;
+	font-weight: bold;
+	color: #5d3720;
+}
+.contText{
+	font-size: 16px;
+	font-weight: bold;
+	color: #5d3720;
+	margin-top: -10px;
+	margin-bottom: 20px;
+}
+input, textarea{
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 350px;
+  height: 10px;
+  background-color: #e6ded5;
+  border: 2px solid #baa68c;
+
+}
+label{
+	font-size: 14px;
+	font-weight: bold;
+	color: #d0812f;
+}
+#comments{
+  width: 360px;
+  height: 150px;
+}
+#submit{
+  width: 80px;
+  padding: 5px 10px 5px 10px;
+  background-color: #d0812f;
+  height: 30px;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+}
+#submit:hover{
+	background-color: #baa68c;
+}
+#content2 {
+	margin-left: auto;
+	width: 440px;
+	margin-left: 100px;
+}
+#content2 ul{
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #d0812f;
+  line-height: 25px;
+}
